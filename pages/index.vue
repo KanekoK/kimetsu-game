@@ -39,6 +39,9 @@
 
 const hitRange = 100;
 
+/**
+ * 丸太がたんじろうにヒットしたかどうかの判定
+ */
 function collisionDetection(maruta) {
   let marutaLocation = maruta.getBoundingClientRect().left;
 
@@ -51,6 +54,9 @@ function collisionDetection(maruta) {
   }
 }
 
+/**
+ * スコア
+ */
 function score(points, detection) {
   if (detection) {
 
@@ -61,6 +67,9 @@ function score(points, detection) {
   return points
 }
 
+/**
+ * エフェクトの制御
+ */
 function effecter(detection, refs) {
   if (detection) {
     refs.maruta.style.display = 'none';
